@@ -31,16 +31,6 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000);
 }
-
-
-
-
-
-
-
-
-
-
 var movies=[
     {
      name: "Train to busan",
@@ -106,6 +96,46 @@ for (var i = 0; i < movies.length; i++) {
 "</div>"
 );
 } 
+var kids = [
+    { 
+      name: "frozen" , 
+      image:"https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
+      dateOfPublication: "19 novembre 2013"
+    },
+    {
+    name: "Ice age" , 
+    image: "https://fr.web.img6.acsta.net/medias/nmedia/00/02/47/01/affiche.jpg" ,
+    dateofpublication: "12 mars 2002"
+    },
+    {
+      name: "Nemo",
+      image:"https://slspotlight.com/wp-content/uploads/2012/09/FindingNemo.jpg",
+      dateofpublication:"30 mai 2003"
+     
+      name: "lion king",
+      image:"https://img01.mgo-images.com/image/thumbnail/v2/content/MMVFD4527132F1B898E30D0400B847E4C759.jpeg",
+      dateofpublication:"9 juillet 2019"
+
+   }
+   ];
+
+
+
+
+
+
+$('#data').hide()
+
+var data=""
+$('#loginB').click(function(){
+     document.getElementById("data").textContent = "E-mail:" + $('#inp').val() + "Password:"   + $('#inp1').val()  + "Repeat Password:"+ $("#inp2").val() 
+data= $('#inp').val() + " " + $('#inp1').val() + " " + $("#inp2").val() 
+ localStorage.setItem($('#fname').val(), data);
+})
+
+
+
+
 
 
 

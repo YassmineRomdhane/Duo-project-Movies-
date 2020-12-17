@@ -110,3 +110,7 @@ p {
   color: white;
   bottom: 10%;
 }
+#slideShow {
+  margin-left: 35%;
+  margin-top: 1em;
+}
