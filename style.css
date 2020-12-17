@@ -23,13 +23,12 @@
 #BT:hover {
   background-color: #e7e7e7;
 }
-#btn {
-  background-color: #667070;
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 16px;
-  background-color: gris;
-  color: White;
-  border: 2px solid #e7e7e7;
-  margin-left: 82%;
+
+#search {
+  margin-left: 85%;
+  width: 200px;
+  height: 50x;
+}
+em {
+  color: red;
 }

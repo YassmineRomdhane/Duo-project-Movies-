@@ -1,8 +1,5 @@
-function openSearch() {
-  document.getElementById("btn").style.display = "block";
-}
-
-
-function closeSearch() {
-  document.getElementById("btn").style.display = "none";
-}
+$("#id01").hide()
+$("#BT1").click(function(){
+  $(".head").hide("fast")
+  $("#id01").show("slow")
+})
