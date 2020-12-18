@@ -1,13 +1,18 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
 .head {
-  padding: 5px;
+  padding-bottom: 15px;
   text-align: center;
   background: #667070;
   color: white;
   font-size: 30px;
   width: 100%;
-}
-body {
-  background-color: ;
 }
 
 #MY {
@@ -36,16 +41,17 @@ body {
   background-color: gris;
   color: White;
   border: 2px solid #e7e7e7;
+  left: 50%;
 }
 #BBT:hover {
   background-color: #e7e7e7;
 }
 
 #search {
-  margin-left: 85%;
+  margin-left: 70%;
   width: 200px;
-  height: 50x;
-  padding: 01mm;
+  height: 25px;
+  /* padding: 1mm; */
 }
 em {
   color: red;
@@ -61,6 +67,15 @@ em {
 }
 
 #loginB {
+  background-color: green;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+#cancel {
   background-color: red;
   color: white;
   padding: 14px 20px;
@@ -95,6 +110,16 @@ em {
   height: auto;
 }
 
+.second2 {
+  width: 100%;
+  height: 80%;
+}
+.second2:hover {
+  opacity: 0.5;
+  background-color: gray;
+  box-shadow: 0 20px 20px 0 red, 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 p {
   position: relative;
   font-family: "Gentium Book Basic", serif;
@@ -105,14 +130,17 @@ p {
 }
 
 .store {
+  width: 100%;
+  height: 200px;
   margin-top: 50px;
-  margin-left: 5%;
-  height: auto;
+  margin-left: 5px;
 }
-/* .store2 {
+
+.store2 {
   margin-top: 50px;
-  margin-left: 5%;
-} */
+  width: 100%;
+  height: 200px;
+}
 .second {
   width: 100%;
   height: 80%;
@@ -130,6 +158,30 @@ p {
   bottom: 10%;
 }
 #slideShow {
-  margin-left: 25%;
+  margin: auto;
   margin-top: 1em;
+}
+
+#check {
+  margin-top: 10px;
+  position: relative;
+  float: right;
+  padding: 0px;
+  margin-right: 5%;
+}
+
+.autoSlides {
+  height: 300px;
+  margin: auto;
+}
+.login {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.bts {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  margin-top: 10px;
 }
