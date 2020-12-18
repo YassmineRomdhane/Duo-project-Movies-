@@ -154,6 +154,8 @@ for (var i = 0; i < kids.length; i++) {
 "</div>"
 );
 }
+
+
 function pick(name){ 
  var favoret = JSON.parse(localStorage.getItem('favoret'));
  favoret.push(name)
@@ -161,6 +163,8 @@ function pick(name){
   favoret = JSON.parse(localStorage.getItem('favoret'));
  console.log("this is favoret ==== >" , favoret)
 }
+
+
 $(".favorite").hide() 
 $(".BT").click(function(){
    var favoret = JSON.parse(localStorage.getItem('favoret'));
@@ -182,8 +186,12 @@ $(".store").hide()
 $(".store2").hide() 
 $("#slideShow").hide()
 $(".favorite").show() 
+
 }) 
+
 $('#data').hide()
+
+
 var users=[]
 $('#loginB').click(function(){
 if($('#inp1').val()===$("#inp2").val()){
