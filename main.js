@@ -12,7 +12,7 @@ $("#loginB").click(function(){
  console.log($("#inp").val());
  console.log($("#inp1").val());
  console.log($("#inp2").val());
-    alert("welcome")
+    
        return false;
 });
 
@@ -31,6 +31,8 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000);
 }
+
+
 var movies=[
     {
      name: "Train to busan",
@@ -66,7 +68,7 @@ var movies=[
         dateOfPublication: "4 août 2010"
    
        },
-   
+  
        {name: "Project Power",
         image: "https://www.denofgeek.com/wp-content/uploads/2020/07/project-power-poster-netflix.jpg?fit=1200%2C680",
         dateOfPublication: "14 août 2020"
@@ -88,14 +90,14 @@ $("body").append("<ul></ul>");
 for (var i = 0; i < movies.length; i++) {
   $(".store").append("<div class='category1'>" +
   "<img src=" + movies[i].image + " class='second'>" +
- " <p>"+ movies[i].name + "</p>" +
+ " <p>"+ movies[i].name + "</p>" +  "<input type='checkbox' id='vehicle1' name='vehicle1' value='Bike'></input>"+
 "</div>"
 );
 } 
-var kids = [
-    { 
-      name: "frozen" , 
-      image:"https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
+ var kids = [
+     { 
+       name: "frozen" , 
+       image:"https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
       dateOfPublication: "19 novembre 2013"
     },
     {
@@ -107,20 +109,69 @@ var kids = [
       name: "Nemo",
       image:"https://slspotlight.com/wp-content/uploads/2012/09/FindingNemo.jpg",
       dateofpublication:"30 mai 2003"
+    },
      
-      name: "lion king",
+     {name: "lion king",
       image:"https://img01.mgo-images.com/image/thumbnail/v2/content/MMVFD4527132F1B898E30D0400B847E4C759.jpeg",
       dateofpublication:"9 juillet 2019"
 
    }
    ];
+$("body").append("<ul></ul>");
+for (var i = 0; i < kids.length; i++) {
+  $(".store2").append("<div class='category2'>" +
+  "<img src=" + kids[i].image + " class='second2'>" +
+ " <p>"+ kids[i].name + "</p>" +
+"</div>"
+);
+}
+
+
+
+
 
 $('#data').hide()
 
-var data=""
+var users=[]
 $('#loginB').click(function(){
-     document.getElementById("data").textContent = "E-mail:" + $('#inp').val() + "Password:"   + $('#inp1').val()  + "Repeat Password:"+ $("#inp2").val() 
-data= $('#inp').val() + " " + $('#inp1').val() + " " + $("#inp2").val() 
- localStorage.setItem($('#fname').val(), data);
+if($('#inp1').val()===$("#inp2").val()){
+  data= {name: $('#inp').val(), password:  $('#inp1').val() }
+  users.push(data)
+  alert(`welcome ${$('#inp').val()}`)
+ localStorage.setItem('users', JSON.stringify(users));
+}
+else{
+  alert("wrong password")
+}
 })
 
+
+
+
+
+
+//      document.getElementById("data").textContent = "E-mail:" + $('#inp').val() + "Password:"   + $('#inp1').val()  + "Repeat Password:"+ $("#inp2").val() 
+// data= $('#inp').val() + " " + $('#inp1').val() + " " + $("#inp2").val() 
+//  localStorage.setItem('users', data);
+
+
+
+
+
+
+
+
+
+// var name = $('#search).val()
+
+// function searchMovies(name,movies){
+  
+//   var result = "Your Movie is not found";
+//   for(var i = 0 ; i<movies.length; i++){
+//    if(movies[i].name.toUpperCase()===name.toUpperCase()){
+//   //  console.log("Found it !")
+//    console.log(movies[i]);
+//     }
+// }
+//     return result
+// }
