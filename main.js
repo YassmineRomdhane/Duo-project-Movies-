@@ -66,11 +66,7 @@ var movies=[
         dateOfPublication: "4 août 2010"
    
        },
-    //    {name: "The Curious Case of Benjamin Button",
-    //     image: "https://fr.web.img4.acsta.net/medias/nmedia/18/67/78/06/19028560.jpg",
-    //     dateOfPublication: "8 décembre 2008"
    
-    //    },
        {name: "Project Power",
         image: "https://www.denofgeek.com/wp-content/uploads/2020/07/project-power-poster-netflix.jpg?fit=1200%2C680",
         dateOfPublication: "14 août 2020"
@@ -119,11 +115,6 @@ var kids = [
    }
    ];
 
-
-
-
-
-
 $('#data').hide()
 
 var data=""
@@ -133,69 +124,3 @@ data= $('#inp').val() + " " + $('#inp1').val() + " " + $("#inp2").val()
  localStorage.setItem($('#fname').val(), data);
 })
 
-
-
-
-
-
-
-
-
-
-
-$('#data').hide()
-
-var data=""
-$('#loginB').click(function(){
-     document.getElementById("data").textContent = "E-mail:" + $('#inp').val() + "Password:"   + $('#inp1').val()  + "Repeat Password:"+ $("#inp2").val() 
-data= $('#inp').val() + " " + $('#inp1').val() + " " + $("#inp2").val() 
- localStorage.setItem($('#fname').val(), data);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var kids = [
-//     { 
-//       name: "frozen" , 
-//       image:"https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
-//       dateOfPublication: "19 novembre 2013"
-//     },
-//     {
-//     name: "Ice age" , 
-//     image: "https://fr.web.img6.acsta.net/medias/nmedia/00/02/47/01/affiche.jpg" ,
-//     dateofpublication: "12 mars 2002"
-//     }
-// ]+-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // $('.signupbtn').click(function(){
-//     //  document.getElementById("data").textContent = "firstName : " + $('#fname').val() + "\n " +" lastName : " + "\n " + $('#lname').val() + " \n" + "Address :"+ $("#address").val() + "\n " + "e-mail address :" + $("#address").val()
-//  $('#data').show()
-// data= $('#fname').val() + " " + $('#lname').val() + " " + $("#address").val() +  " " + $("#add").val()
-//  localStorage.setItem($('#fname').val(), data);
-// })
-
-// localStorage.setItem($('#fname').val , data)
