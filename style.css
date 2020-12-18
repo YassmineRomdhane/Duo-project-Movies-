@@ -5,18 +5,19 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(173, 169, 169);
 }
 .head {
   padding-bottom: 15px;
   text-align: center;
-  background: #667070;
+  background: rgb(36, 36, 36);
   color: white;
   font-size: 30px;
   width: 100%;
 }
 
 #MY {
-  font-family: Gothic;
+  font-family: Georgia, Times, "Times New Roman", serif;
   right: 40%;
 }
 
@@ -30,7 +31,7 @@ body {
   border: 2px solid #e7e7e7;
 }
 #BT:hover {
-  background-color: #e7e7e7;
+  background-color: #645d5d;
 }
 
 #BBT {
@@ -42,16 +43,16 @@ body {
   color: White;
   border: 2px solid #e7e7e7;
   left: 50%;
+  margin-left: 50%;
 }
 #BBT:hover {
-  background-color: #e7e7e7;
+  background-color: red;
 }
 
 #search {
   margin-left: 70%;
   width: 200px;
   height: 25px;
-  /* padding: 1mm; */
 }
 em {
   color: red;
@@ -88,12 +89,16 @@ em {
 .category1 {
   float: left;
   width: 15%;
-  height: 100%;
+  height: 110%;
   margin-left: 2%;
   background-color: white;
   box-shadow: 0 40px 80px 0 rgba(201, 141, 141, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 5%;
+  font-family: "PT Serif", serif;
+
+  justify-content: space-between;
+  text-align: center;
 }
 
 .category2 {
@@ -108,6 +113,28 @@ em {
   margin-top: 50px;
   margin-left: 5%;
   height: auto;
+  font-family: "PT Serif", serif;
+
+  justify-content: space-between;
+  text-align: center;
+}
+
+.category3 {
+  float: left;
+  width: 15%;
+  height: 15%;
+  margin-left: 2%;
+  background-color: white;
+  box-shadow: 0 40px 80px 0 rgba(201, 141, 141, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-left: 5%;
+  height: auto;
+  font-family: "PT Serif", serif;
+
+  justify-content: space-between;
+  text-align: center;
 }
 
 .second2 {
@@ -166,8 +193,10 @@ p {
   margin-top: 10px;
   position: relative;
   float: right;
-  padding: 0px;
-  margin-right: 5%;
+  padding: -5mm;
+  margin-right: 1em;
+  background-color: white;
+  border-radius: 100%;
 }
 
 .autoSlides {
@@ -184,4 +213,21 @@ p {
   width: 20%;
   padding: 10px;
   margin-top: 10px;
+}
+
+#BT1 {
+  background-color: #667070;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  background-color: gris;
+  color: White;
+  border: 2px solid #e7e7e7;
+}
+#BT1:hover {
+  background-color: #645d5d;
+}
+.Mv {
+  text-decoration: none;
+  color: white;
 }

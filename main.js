@@ -9,22 +9,22 @@ function searchMovies(){
   console.log(name)
   for(var i = 0 ; i<movies.length; i++){
    if(movies[i].name.toUpperCase()===name.toUpperCase()){
- $("#found").append("<div class='category1'>" +
+ $("#found").append("<div class='category3'>" +
   "<img src=" + movies[i].image + " class='second'>" +
- " <p>"+ movies[i].name + "</p>" +
-"</div>"
+  " <p>"+ movies[i].name + "</p>" +
+  "</div>"
 );   
-$(".store").hide() 
-$(".store2").hide() 
-$("#slideShow").hide()
-$("#found").show()
+  $(".store").hide() 
+  $(".store2").hide() 
+  $("#slideShow").hide()
+  $("#found").show()
 
 return;
     }
 }
 alert("your movie is not found")
 }
-$("#BBT").click(function(){
+  $("#BBT").click(function(){
   $(".head").hide("fast")
   $(".store").hide("fast")
   $(".favorite").hide() 
@@ -37,7 +37,7 @@ $("#cancel").click(function(){
   $(".login").hide("slow")
   $(".head").show("fast")
   $(".store").show("fast")
-  $(".favorite").show() 
+  $(".favorite").hide() 
   $("#slideShow").show()
   $(".store2").show()
   
@@ -52,7 +52,6 @@ $("#loginB").click(function(){
 
 var myIndex = 0;
 carousel();
-
 function carousel() {
   var i;
   var x = document.getElementsByClassName("autoSlides");
@@ -70,22 +69,22 @@ var movies=[
     {
      name: "Train to busan",
      image: "https://asiasociety.org/sites/default/files/styles/1200w/public/T/TrainToBusanFeatured2a-%281%29.jpg",
-     dateOfPublication:  "20 July 2016"
+     
 
     } ,
     { name: "Spy" ,
       image: "https://fr.web.img6.acsta.net/pictures/15/03/17/17/06/314791.jpg",
-      dateOfPublication: "2015"
+    
    
     },
     {name: "Jumanji",
      image: "https://i.pinimg.com/474x/c7/84/68/c78468587d19ae422d1de12805bc0e23.jpg",
-     dateOfPublication: "5 décembre 2017"
+     
    
      },
        {name: "The prestige",
         image: "https://images-na.ssl-images-amazon.com/images/I/51wILNNX2VL._SY445_.jpg",
-        dateOfPublication: "17 octobre 2006"
+        
      },
        {name: "Saw",
         image: "https://img.filmsactu.net/datas/films/s/a/saw-spiral/xl/saw-spiral-5e3ad0139f7c4.jpg",
@@ -117,12 +116,12 @@ var movies=[
        }
 ];
 
-$("body").append("<ul></ul>");
-for (var i = 0; i < movies.length; i++) {
+  $("body").append("<ul></ul>");
+  for (var i = 0; i < movies.length; i++) {
   $(".store").append("<div class='category1'>" +
-  "<img src=" + movies[i].image + " class='second'>" +
- " <p>"+ movies[i].name + "</p>" +  "<button type='button' id='check' onclick='pick(" + "movies[" + i + "].name" + ")' value='movies'> + </button>"+
-"</div>"
+   "<img src=" + movies[i].image + " class='second'>" +
+   " <p>"+ movies[i].name + "</p>" +  "<button type='button' id='check' onclick='pick(" + "movies[" + i + "].name" + ")' value='movies'>&#x1F497</button>"+
+   "</div>"
 );
 } 
  var kids = [
@@ -146,18 +145,25 @@ for (var i = 0; i < movies.length; i++) {
       image:"https://lumiere-a.akamaihd.net/v1/images/open-uri20150422-12561-13brs4i_abd7aa3a.jpeg?region=0%2C0%2C1000%2C1502",
      }
    ];
-$("body").append("<ul></ul>");
-for (var i = 0; i < kids.length; i++) {
+  $("body").append("<ul></ul>");
+  for (var i = 0; i < kids.length; i++) {
   $(".store2").append("<div class='category2'>" +
   "<img src=" + kids[i].image + " class='second2'>" +
- " <p>"+ kids[i].name + "</p>" +"<button type='button' id='check' onclick='pick(" + "kids[" + i + "].name" + ")' value='movies'> + </button>"+
-"</div>"
+  " <p>"+ kids[i].name + "</p>" +"<button type='button' id='check' onclick='pick(" + "kids[" + i + "].name" + ")' value='movies'>&#x1F497</button>"+
+ "</div>"
 );
 }
 
+ localStorage.setItem('favoret', JSON.stringify([]));
 
 function pick(name){ 
  var favoret = JSON.parse(localStorage.getItem('favoret'));
+   for(var i = 0 ; i < favoret.length ; i++){
+    if(favoret[i]===name){
+      alert("already exist :) ")
+      return;
+    }
+  }
  favoret.push(name)
  localStorage.setItem('favoret', JSON.stringify(favoret));
   favoret = JSON.parse(localStorage.getItem('favoret'));
@@ -166,14 +172,14 @@ function pick(name){
 
 
 $(".favorite").hide() 
-$(".BT").click(function(){
+$("#BT1").click(function(){
    var favoret = JSON.parse(localStorage.getItem('favoret'));
 
   $(".favorite").empty()
 for (var i = 0; i < favoret.length; i++) {
      for(var j = 0 ; j < movies.length ; j++){
        if(movies[j].name === favoret[i]){
-           $(".favorite").append("<div class='category1'>" +
+           $(".favorite").append("<div class='category3'>" +
   "<img src=" + movies[j].image + " class='second'>" +
  " <p>"+ movies[j].name + "</p>" +  
 "</div>"
@@ -190,8 +196,6 @@ $(".favorite").show()
 }) 
 
 $('#data').hide()
-
-
 var users=[]
 $('#loginB').click(function(){
 if($('#inp1').val()===$("#inp2").val()){
