@@ -76,19 +76,20 @@ em {
   background-color: green;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 5%;
 }
 #cancel {
   background-color: red;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .category1 {
