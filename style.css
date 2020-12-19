@@ -53,6 +53,11 @@ body {
   margin-left: 70%;
   width: 200px;
   height: 25px;
+  margin-top: 12px;
+}
+#fasearch {
+  width: 20px;
+  height: 15px;
 }
 em {
   color: red;
@@ -96,7 +101,7 @@ em {
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 5%;
   font-family: "PT Serif", serif;
-
+  margin-top: 2em;
   justify-content: space-between;
   text-align: center;
 }
@@ -111,24 +116,6 @@ em {
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 5%;
   margin-top: 50px;
-  margin-left: 5%;
-  height: auto;
-  font-family: "PT Serif", serif;
-
-  justify-content: space-between;
-  text-align: center;
-}
-
-.category3 {
-  float: left;
-  width: 15%;
-  height: 15%;
-  margin-left: 2%;
-  background-color: white;
-  box-shadow: 0 40px 80px 0 rgba(201, 141, 141, 0.2),
-    0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 5%;
-  margin-top: 2%;
   margin-left: 5%;
   height: auto;
   font-family: "PT Serif", serif;
@@ -197,6 +184,8 @@ p {
   margin-right: 1em;
   background-color: white;
   border-radius: 100%;
+  border: none;
+  cursor: pointer;
 }
 
 .autoSlides {
@@ -230,4 +219,17 @@ p {
 .Mv {
   text-decoration: none;
   color: white;
+}
+
+#clear {
+  background-color: #667070;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  color: White;
+  border: 2px solid #e7e7e7;
+  margin-left: 82%;
+}
+#clear:hover {
+  background-color: red;
 }

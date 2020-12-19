@@ -17,7 +17,7 @@
 
         <div class="head" >
             <input type="text" id="search" placeholder="Search..">
-             <button onclick="searchMovies()"><i class="fa fa-search"></i></button>
+             <button onclick="searchMovies()"><i   id="fasearch" class="fa fa-search"></i></button>
             <h1 id="MY"><em>M&Y</em> movies</h1>
             <button id="BT"><a class="Mv" href="#movies" >Movies</a></button>
             <button id="BT"><a class="Mv" href="#kids">Kids</a></button>
@@ -30,10 +30,8 @@
         <div id="found"></div>
 
     <div class="login">
-        <label class="input" for="fname"><b>First Name</b></label>
-        <input id="inp" class="input" type="text" placeholder="First Name" name="fname" required>
-        <label class="input" for="lname"><b>Last Name</b></label>
-        <input id="inp" class="input" type="text" placeholder="Last Name" name="lname" required>
+        <label class="input" for="fname"><b>User Name</b></label>
+        <input id="inp" class="input" type="text" placeholder="Users Name" name="fname" required>
         <label class="input" for="email"><b>Email</b></label>
         <input id="inp" class="input" type="text" placeholder="Enter Email" name="email" required>
         <label class="input"> <b>Password</b></label>
@@ -52,16 +50,8 @@
     </div>
     <div class="store" id="movies"></div>
     <div class="store2" id="kids"></div>
-    <div class = "favorite" style="width: 100%;height :200px"></div>
+    <div class = "favorite" style="width: 100%;height :200px">
+    </div>
     <script src="main.js"></script>
 </body>
-
-
-
-
-
-
-
-
-
 </html> 

@@ -22,7 +22,7 @@ function searchMovies(){
 return;
     }
 }
-alert("your movie is not found")
+alert("Your movie is not found")
 }
   $("#BBT").click(function(){
   $(".head").hide("fast")
@@ -49,6 +49,14 @@ $("#loginB").click(function(){
     return false;
 });
 
+$("#BT").click(function(){
+$(".favorite").hide() 
+ $(".store").show("fast")
+ $(".store2").show()
+  $("#slideShow").show()
+
+});
+
 
 var myIndex = 0;
 carousel();
@@ -69,57 +77,68 @@ var movies=[
     {
      name: "Train to busan",
      image: "https://asiasociety.org/sites/default/files/styles/1200w/public/T/TrainToBusanFeatured2a-%281%29.jpg",
-     
+          link : "https://forja.tn/movie/tt5700672/Train-to-Busan-2016"
+
 
     } ,
     { name: "Spy" ,
       image: "https://fr.web.img6.acsta.net/pictures/15/03/17/17/06/314791.jpg",
-    
+         link : "https://forja.tn/movie/tt8242084/My-Spy-2020"
+
    
     },
     {name: "Jumanji",
      image: "https://i.pinimg.com/474x/c7/84/68/c78468587d19ae422d1de12805bc0e23.jpg",
+     link : "https://forja.tn/movie/tt7975244/Jumanji-The-Next-Level-2019"
      
    
      },
        {name: "The prestige",
         image: "https://images-na.ssl-images-amazon.com/images/I/51wILNNX2VL._SY445_.jpg",
-        
+             link : "https://forja.tn/movie/tt0482571/The-Prestige-2006"
+
      },
        {name: "Saw",
         image: "https://img.filmsactu.net/datas/films/s/a/saw-spiral/xl/saw-spiral-5e3ad0139f7c4.jpg",
-        
+             link : "https://forja.tn/movie/tt0432348/Saw-II-2005"
+
      },
        {name:"Blow",
         image: "https://images-na.ssl-images-amazon.com/images/I/51ABCZ3C8TL._AC_.jpg",
-        
-   
+         link : "https://forja.tn/movie/tt0221027/Blow-2001"
+
        },
        {name:"Takers",
         image: "https://images-na.ssl-images-amazon.com/images/I/816dc%2BxiIHL._AC_SY445_.jpg",
-        
+             link : "https://www.youtube.com/watch?v=3jSs_Yo1Vmo"
+
    
        },
   
        {name: "Project Power",
         image: "https://www.denofgeek.com/wp-content/uploads/2020/07/project-power-poster-netflix.jpg?fit=1200%2C680",
-       
+            link : "https://forja.tn/movie/tt7153488/Army-of-One-2018"
+
 
    
        },
        {name: "Suicide squad",
         image: "https://images-na.ssl-images-amazon.com/images/I/A1tDLvY6efL._AC_SY445_.jpg",
+             link : "https://forja.tn/movie/tt7153488/Army-of-One-2018"
+
        },
        {
         name:"divergent", 
         image: "https://fr.web.img2.acsta.net/pictures/15/01/28/18/08/152985.jpg",
+             link : "https://forja.tn/movie/tt7153488/Army-of-One-2018"
+
        }
 ];
 
   $("body").append("<ul></ul>");
   for (var i = 0; i < movies.length; i++) {
   $(".store").append("<div class='category1'>" +
-   "<img src=" + movies[i].image + " class='second'>" +
+   "<a href="+movies[i].link +"><img src=" + movies[i].image + " class='second'></a>" +
    " <p>"+ movies[i].name + "</p>" +  "<button type='button' id='check' onclick='pick(" + "movies[" + i + "].name" + ")' value='movies'>&#x1F497</button>"+
    "</div>"
 );
@@ -128,6 +147,7 @@ var movies=[
      { 
        name: "frozen" , 
        image:"https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
+       
      
     },
     {
@@ -154,7 +174,32 @@ var movies=[
 );
 }
 
+
+function deleteFav(){
  localStorage.setItem('favoret', JSON.stringify([]));
+ $(".favorite").hide() 
+    var favoret = JSON.parse(localStorage.getItem('favoret'));
+  $(".favorite").empty()
+for (var i = 0; i < favoret.length; i++) {
+     for(var j = 0 ; j < movies.length ; j++){
+       if(movies[j].name === favoret[i]){
+           $(".favorite").append("<div class='category1'>" +
+  "<img src=" + movies[j].image + " class='second'>" +
+ " <p>"+ movies[j].name + "</p>" +  
+"</div>"
+);
+       }
+     }  
+
+}
+
+
+$(".store").hide() 
+$(".store2").hide() 
+$("#slideShow").hide()
+$(".favorite").show()
+
+}
 
 function pick(name){ 
  var favoret = JSON.parse(localStorage.getItem('favoret'));
@@ -168,25 +213,27 @@ function pick(name){
  localStorage.setItem('favoret', JSON.stringify(favoret));
   favoret = JSON.parse(localStorage.getItem('favoret'));
  console.log("this is favoret ==== >" , favoret)
+ alert("Added To FAV")
 }
 
 
 $(".favorite").hide() 
 $("#BT1").click(function(){
    var favoret = JSON.parse(localStorage.getItem('favoret'));
-
   $(".favorite").empty()
 for (var i = 0; i < favoret.length; i++) {
      for(var j = 0 ; j < movies.length ; j++){
        if(movies[j].name === favoret[i]){
-           $(".favorite").append("<div class='category3'>" +
-  "<img src=" + movies[j].image + " class='second'>" +
+           $(".favorite").append("<div class='category1'>" +
+  "<a href="+movies[i].link +"><img src=" + movies[i].image + " class='second'></a>"  +
  " <p>"+ movies[j].name + "</p>" +  
 "</div>"
 );
        }
      }  
+
 }
+ $(".favorite").append('<button id ="clear" onclick="deleteFav()">Clear</button>')
 
 $(".store").hide() 
 $(".store2").hide() 
@@ -201,13 +248,18 @@ $('#loginB').click(function(){
 if($('#inp1').val()===$("#inp2").val()){
   data= {name: $('#inp').val(), password:  $('#inp1').val() }
   users.push(data)
-  alert(`welcome ${$('#inp').val()}`)
- localStorage.setItem('users', JSON.stringify(users));
+  alert(`Welcome ${$('#inp').val()}`)
+localStorage.setItem('users', JSON.stringify(users));
 }
 else{
-  alert("wrong password")
+  alert("WRONG PASSWORD")
 }
 })
+
+
+  
+  
+  
 
 
 
