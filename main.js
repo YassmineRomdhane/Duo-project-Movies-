@@ -9,7 +9,7 @@ function searchMovies(){
   console.log(name)
   for(var i = 0 ; i<movies.length; i++){
    if(movies[i].name.toUpperCase()===name.toUpperCase()){
- $("#found").append("<div class='category3'>" +
+ $("#found").append("<div class='category1'>" +
   "<img src=" + movies[i].image + " class='second'>" +
   " <p>"+ movies[i].name + "</p>" +
   "</div>"
