@@ -1,7 +1,7 @@
  $(".login").hide()
   $("#found").hide()
 
- 
+  //function searchmovies
 function searchMovies(){
     $("#found").empty()
 
@@ -57,7 +57,7 @@ $(".favorite").hide()
 
 });
 
-
+// Slydeshow
 var myIndex = 0;
 carousel();
 function carousel() {
@@ -72,7 +72,7 @@ function carousel() {
   setTimeout(carousel, 2000);
 }
 
-
+// Array of movies
 var movies=[
     {
      name: "Train to busan",
@@ -143,6 +143,8 @@ var movies=[
    "</div>"
 );
 } 
+
+//Array of kids
  var kids = [
      { 
        name: "frozen" , 
@@ -174,7 +176,7 @@ var movies=[
 );
 }
 
-
+// function Delete inside Div FAV
 function deleteFav(){
  localStorage.setItem('favoret', JSON.stringify([]));
  $(".favorite").hide() 
@@ -200,6 +202,8 @@ $("#slideShow").hide()
 $(".favorite").show()
 
 }
+
+// Function click to add movies in Your favorite liste
 
 function pick(name){ 
  var favoret = JSON.parse(localStorage.getItem('favoret'));
